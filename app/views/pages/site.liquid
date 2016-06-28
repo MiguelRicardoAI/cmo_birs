@@ -1,0 +1,226 @@
+---
+title: Site Information
+is_layout: true
+position: 3
+---
+{% extends 'layouts/default' %}
+{% block content %}
+{% block header, short_name: true, priority: 1 %}
+<div class="container">     
+
+  {%editable_text siteinfo%}
+  <div class="space" id="information">  
+  <span>
+    CMO On Site Information
+  </span> 
+  </div>
+  <p>
+    Welcome to the 2016 Casa Matemática Oaxaca Conference Program, hosted by CMO at Hotel Hacienda Los Laureles. We have prepared some important information for you to ensure that your stay at CMO is positive and productive:
+  </p>
+  <ol>
+    <li>
+      <p class="justy">
+        All lectures, lunch and dinner will be at Hotel Hacienda Los Laureles. Breakfast will be at your assigned hotel. Hotel Hacienda Los Laureles is located at Calle Hidalgo #21, Col. San Felipe del Agua, Oaxaca, Oax, México.
+      </p>
+      <p class="justify">
+        CMO participants will receive a scheduled breakfast, lunch and dinner, for which the menu will be fixed (ie. you will not have a choice of options).
+      </p>
+    </li>
+    <li>
+    <p class="justify">
+      Your meals: There will be a computer at the restaurant of each hotel. You will be required to select your hotel and enter your room number.
+    </p>
+    </li>
+    <li>
+      <p class="justify">
+        Internet on site: To have a faster internet connection while you are at your workshop, please use the CMO-BIRS Internet connection available mainly in the conference room and at the meeting room at Hotel Hacienda Los Laureles:
+      </p>
+      <p>
+        Wi-fi: 
+        <b>
+          CMO-BIRS
+        </b>
+      </p>
+      <p>
+        Password: 
+         <b>
+          cmo_oaxaca
+         </b>
+      </p>
+    </li>
+    <li>
+      <p>
+        All recordings lectures must be scheduled between 9:00 am – 5:30 pm.
+      </p>
+    </li>
+    <li>
+      <p class="justify">
+        Working late: If you need to work in the Meeting Room after 11:00 pm, please ask for a key at the front desk.
+      </p>
+    </li>
+    <li>
+      <p>
+        Beer and wine: There is a self-serve mini bar available at Hotel Angel Inn on a cash-honor basis.
+      </p>
+    </li>
+    <li>
+      <p>
+        Restrooms: For your convenience, there are restrooms at the bar and next to the gym at Hotel Hacienda Los Laureles.
+      </p>
+    </li>
+    <li>
+      <p class="justify">
+        Stay Healthy: We recommend that you do not to drink tap water or eat food purchased from street vendors.
+      </p>
+    </li>
+    <li>
+      <p class="justify">
+        Visiting Downtown: To go downtown you may ride the bus across the street of the Hotel Hacienda Los Laureles and it will take you to Independencia Street in downtown. The fee is $7.00 Mexican Pesos.
+      </p>
+      <div class="center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d30510.484104308176!2d-96.73755234328483!3d17.081918898776582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x85c722407fd5b687%3A0x506383de32c967f8!2sZ%C3%B3calo%2C+Portal+del+Palacio%2C+Centro%2C+Oaxaca!3m2!1d17.0606181!2d-96.72548359999999!4m5!1s0x85c7219ecff2e4bd%3A0xefb11f56916887c8!2sHacienda+Los+Laureles+Hotel%2C+Calle+Hidalgo+21%2C+San+Felipe+del+Agua%2C+68020+San+Felipe+del+Agua%2C+OAX!3m2!1d17.104430999999998!2d-96.7111015!5e0!3m2!1ses-419!2smx!4v1464457673412" width="400" height="300" style="border:0" allowfullscreen></iframe>
+      </div>
+    </li>
+    <li>
+     <p class="justify">
+      For more information about Oaxaca—what to do, activities, tours, medical services, and more, we have prepared a welcome package for your convenience. You may see it at: <a href="">WelcomePackage</a>
+     </p>
+    </li>
+  </ol>
+  <p class="justify">
+    Also, you will find a printed copy in your hotel room. Please, do not remove it from your room.
+  </p>
+  <p class="justify">
+    If you require assistance, please come and see us at CMO Office outside the entrance of Hotel Hacienda Los Laureles, or e-mail us at: <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>. The CMO staff will be happy to assist you.
+  </p>
+  {%endeditable_text%}
+
+  {% editable_text facilities %}
+    <a id="facilities"></a>
+    <p>
+      <span>
+       CMO Meeting Facilities
+      </span>
+    </p>
+    <b class="justify">
+        Construction of new facilities is underway. In the meantime, CMO will operate out of the <a href="http://haciendaloslaureles.com">Hotel Hacienda Los Laureles</a>, in the city of Oaxaca.
+    </b>
+  {% endeditable_text %}
+
+    <div>
+      <img alt="hotel" class="img-thumbnail" src="{{ 'hotel.jpg' | theme_image_url }}" width="600" height="420">
+    </div>
+
+  {% editable_text conference%}
+    <a id="conference"></a>  
+    <p>
+        <b>
+            Conference Room:
+        </b>
+    </p>
+    <p class="justify">
+        All lectures will be held in the Conference Room San Felipe at Hotel Hacienda Los Laureles. An LCD projector, one projection screen, a laptop, a digital document camera, chalkboards and wireless internet access are available to presenters.
+        <b>
+            Capacity: 50.
+        </b>
+    </p>
+  {%endeditable_text%}
+
+    <p>
+        <img alt="conference" class="img-thumbnail" src="{{ 'conferences.jpg' | theme_image_url }} " width="600" height="420">
+    </p>
+    <p>
+        <img alt="conference2"  class="img-thumbnail" src="{{ 'conferences2.jpg' | theme_image_url }} " width="600" height="420">
+    </p>
+    <a id="meeting"></a>
+    {% editable_text meeting%}
+    <p>
+        <b>
+            Meeting Room:
+        </b>
+    </p>
+    <p class="justify">
+        The meeting room is for informal group discussions. A printer, laptops, chalkboards, water and wireless Internet access, are freely available in the meeting room.
+        <b>
+            Capacity: 15.
+        </b>
+    </p>
+    {%endeditable_text%}
+
+    <p>
+        <img alt="meeting" class="img-thumbnail" src="{{ 'meeting.jpg' | theme_image_url }}" width="600" height="420">
+    </p>
+    <p>
+        <img alt="meeting2"  class="img-thumbnail" src="{{ 'informal.jpg' | theme_image_url }}" width="600" height="420">
+    </p>
+    <a id="map"></a>
+
+    {% editable_text map%}
+    <p>
+        <b>
+            Facility Map:
+        </b>
+    </p>
+    {%endeditable_text%}
+
+    <p>
+        <img alt="map" class="img-thumbnail" src="{{ 'map.jpg' | theme_image_url }}" width="600" height="420">
+    </p>
+
+    <span>
+      Oaxaca
+    </span>
+    <h3>
+      Town of Oaxaca Information
+    </h3>
+
+   {%editable_text conditions%}
+   <div id="oaxaca" class="well well-sm">What are the climate conditions in Oaxaca ?</div> 
+    <p>
+      Over the course of a year, the temperature in Oaxaca typically varies from 9°C to 31°C and is rarely below 6°C or above 34°C.Good sources for this information are <a href="https://weatherspark.com/averages/32580/Oaxaca-Mexico"> https://weatherspark.com </a> and <a href="http://espanol.weather.com/weather/today/Oaxaca+OA+M%C3%A9xico+MXOA0069:1:MX"> http://espanol.weather.com/weather/today </a>.
+    </p>
+   {%endeditable_text%}
+
+   {%editable_text places%}
+   <div class="well well-sm">What are some good places to visit in Oaxaca and surroundings?</div>
+    <p>
+      There are several amazing places to visit in Oaxaca. You can find information at <a href="http://oaxacatours.mx">http://oaxacatours.mx</a> and request information at <a href="mailto:info@oaxacaexperts.com">info@oaxacaexperts.com</a>.
+    </p>
+    <p>
+      If you plan to extend your trip in Oaxaca and are looking for adventure, consider the Copalita Trail – a five-day trek that takes you from the alpine region of Oaxaca, all the way down to the coveted pristine beaches of the Pacific. Find more information at <a href="http://www.caminocopalita.com">www.caminocopalita.com</a>.
+    </p>
+   {%endeditable_text%}
+
+   {%editable_text plug%}
+   <div class="well well-sm">What are the electrical systems and plug types used in Oaxaca ?</div>
+    <p>
+      Mexico uses 100–127 Volt, 60 Hz electrical outlets, the same <a href="https://en.wikipedia.org/wiki/Category:Electrical_standards">electrical standards</a> as the U.S. and Canada.
+    </p>
+   {%endeditable_text%}
+
+   <div class="center">
+   <img alt="charger" class="img-thumbnail" src="{{ 'charger.png' | theme_image_url }} " width="300" height="210">
+   </div>
+
+   {%editable_text exchange%}
+   <div class="well well-sm">Where can I exchange currencies?</div>
+    <p>
+      It is highly advised to exchange currencies in your country of origin, where you will probably get a better exchange rate with your currency. There are several currency exchanges in downtown Oaxaca, and a bus from the hotels to downtown that takes about 15 minutes.Please note that many businesses in Oaxaca only accept cash payments; therefore, it is highly advisable that you obtain some local currency to use.
+    </p>
+    <div class="center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d4411.84558781598!2d-96.72651607908045!3d17.062619313514865!3m2!1i1024!2i768!4f13.1!2m1!1sexchange+currency+oaxaca!5e0!3m2!1ses-419!2smx!4v1464460298260" width="600" height="450" style="border:0" allowfullscreen></iframe>
+    </div>
+   {%endeditable_text%}
+
+   {%editable_text tipping%}
+   <div class="well well-sm">What is the etiquette around tipping?</div>
+    <p>
+      For information on tipping guidelines in and around Oaxaca city, please visit the <a href="https://www.tripadvisor.ca/Tourism-g150801-Oaxaca_Southern_Mexico-Vacations.html">Trip Advisor website</a>.
+    </p>
+   {%endeditable_text%}
+  
+ 
+</div>
+{% endblock %}
+{% endblock %}
+
