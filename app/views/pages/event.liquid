@@ -1,0 +1,78 @@
+---
+title: Oaxaca
+listed: true
+published: false
+---
+
+{% extends 'layouts/simple' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="space col-md-4">
+  	<ul>
+  		<li class="special-announcement">
+  			<a href="event">Objectives</a>
+  		</li>
+  		<li class="special-announcement">
+  			<a href="#" class="participants">Confirmed Participants</a>
+  		</li>
+  		<li>
+  			<a href="">Press Release</a>
+  		</li>
+  		<li>
+  			<a href="">Meeting Facilities</a>
+  		</li>
+  		<li class="special-announcement">
+  			<a href="#" class="schedule">Schedule</a>
+  		</li>
+  		<li>
+  			<a href="#">Mailing List</a>
+  		</li>
+  		<li>
+  			<a href="">Workshop Videos</a>
+  		</li>
+  		<li>
+  			<a href="">Testimonials</a>
+  		</li>
+  	</ul>
+  </div>
+
+  <div class="space col-md-8" id="event">
+
+  </div>
+
+  <div class="col-md-8 space" id="table_schedule">
+  	<table class="table table-bordered" id="sun">
+	</table>
+	<table class="table table-bordered" id="mon">
+	</table>
+	<table class="table table-bordered" id="tue">
+	</table>
+	<table class="table table-bordered" id="wed">
+	</table>
+	<table class="table table-bordered" id="thu">
+	</table>
+	<table class="table table-bordered" id="fri">
+	</table>
+  </div>
+
+  <div class="col-md-8 space">
+    <table id="table_confirmed" class="table table-bordered" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="40%">
+            Name
+          </th>
+          <th width="60%">
+            Afiliation
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+</div>
+
+{% endblock %}

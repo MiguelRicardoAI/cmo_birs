@@ -53,7 +53,6 @@ toDate =(fech)->
 toMonth =(fech)->
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
     fech = new Date(fech)
-    Nday = fech.getUTCDate()
+    Nday = fech.getDate()
     Nmonth = months[fech.getMonth()]
-    res = Nmonth+" "+Nday
-
+res = Nmonth+" "+Nday

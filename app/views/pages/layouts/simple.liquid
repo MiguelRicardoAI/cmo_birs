@@ -15,11 +15,10 @@ is_layout: false
 
     {{ 'bootstrap.css' | stylesheet_tag }}
     {{ 'application.css' | stylesheet_tag }}
-    {{ 'styles.css' | stylesheet_tag }}
   </head>
   <body>
     {% include 'header' %}
-    {% include 'nav2' %}
+    {% include 'nav' %}
 
     {% block content %}
     {% endblock %}
@@ -27,7 +26,8 @@ is_layout: false
     {% include 'footer' %}
     {{ 'jquery.min.js' | javascript_tag }}
     {{ 'bootstrap.min.js' | javascript_tag }}
+    <script src="/javascripts/coffeescripts/event.js"></script>
     {{ 'index.js' | javascript_tag }}
-    <script src="public/coffeescript/cmo.js.coffee"></script>
+    <!--{{ 'demojson.js' | javascript_tag }}-->
   </body>
 </html>
