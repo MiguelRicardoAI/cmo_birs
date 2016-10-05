@@ -29,7 +29,6 @@ span{
   padding: 0;
   margin: 0;
   position: relative;
-  height: 348px;
 }
 #carousel li {
   opacity: 0;
@@ -121,6 +120,15 @@ iframe{
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+.item-time{
+  width: 18%;
+  text-align: left;
+}
+
+.containertext{
+  margin-top: 30%;
 }
 
 

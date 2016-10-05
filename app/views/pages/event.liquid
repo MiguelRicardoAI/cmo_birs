@@ -2,13 +2,15 @@
 title: Oaxaca
 listed: true
 published: false
+searchable: true
 ---
 
-{% extends 'layouts/simple' %}
+{% extends 'layouts/event' %}
 
 {% block content %}
 
 <div class="container">
+<div class="containertext">
 
   <div class="space col-md-4">
   	<ul>
@@ -18,20 +20,17 @@ published: false
   		<li class="special-announcement">
   			<a href="#" class="participants">Confirmed Participants</a>
   		</li>
-  		<li>
-  			<a href="">Press Release</a>
-  		</li>
-  		<li>
-  			<a href="">Meeting Facilities</a>
+  		<li class="special-announcement">
+  			<a href="#" class="pressr">Press Release</a>
   		</li>
   		<li class="special-announcement">
   			<a href="#" class="schedule">Schedule</a>
   		</li>
-  		<li>
-  			<a href="#">Mailing List</a>
+  		<li class="special-announcement">
+  			<a href="https://www.birs.ca/mailman/listinfo/16w5153">Mailing List</a>
   		</li>
-  		<li>
-  			<a href="">Workshop Videos</a>
+  		<li class="special-announcement">
+  			<a href="#" class="videos">Workshop Videos</a>
   		</li>
   		<li>
   			<a href="">Testimonials</a>
@@ -44,18 +43,30 @@ published: false
   </div>
 
   <div class="col-md-8 space" id="table_schedule">
-  	<table class="table table-bordered" id="sun">
-	</table>
-	<table class="table table-bordered" id="mon">
-	</table>
-	<table class="table table-bordered" id="tue">
-	</table>
-	<table class="table table-bordered" id="wed">
-	</table>
-	<table class="table table-bordered" id="thu">
-	</table>
-	<table class="table table-bordered" id="fri">
-	</table>
+    <table class="table table-bordered" >
+      <tbody id="bsun"><tr><th class="day-head" id="headsun" colspan="2"></th></tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered" id="mon">
+      <tbody id="bmon"><tr><th class="day-head" id="headmon" colspan="2"></th></tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered" id="tue">
+      <tbody id="btue"><tr><th class="day-head" id="headtue" colspan="2"></th></tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered" id="wed">
+      <tbody id="bwed"><tr><th class="day-head" id="headwed" colspan="2"></th></tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered" id="thu">
+      <tbody id="bthu"><tr><th class="day-head" id="headthu" colspan="2"></th></tr>
+      </tbody>
+    </table>
+    <table class="table table-bordered" id="fri">
+      <tbody id="bfri"><tr><th class="day-head" id="headfri" colspan="2"></th></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="col-md-8 space">
@@ -73,6 +84,16 @@ published: false
     </table>
   </div>
 
+
+  <div class="col-md-8 space" id="press">
+    
+  </div>
+
+  <div id='vidplayer'>
+    <img src="http://www.birs.ca/files/images/poster.png" width="832" height="480" alt=""/>
+  </div>
+
+</div>
 </div>
 
 {% endblock %}

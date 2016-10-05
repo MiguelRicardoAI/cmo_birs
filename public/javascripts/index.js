@@ -20,5 +20,3 @@ setInterval(function() {
     }, 8000); // setTimeout
   }
 }, 8000); // setInterval
-
-

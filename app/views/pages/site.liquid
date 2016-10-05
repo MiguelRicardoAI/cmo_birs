@@ -5,8 +5,9 @@ position: 3
 ---
 {% extends 'layouts/default' %}
 {% block content %}
-{% block header, short_name: true, priority: 1 %}
-<div class="container">     
+
+<div class="container">
+<div class="containertext col-md-12">     
 
   {%editable_text siteinfo%}
   <div class="space" id="information">  
@@ -199,7 +200,8 @@ position: 3
    {%endeditable_text%}
 
    <div class="center">
-   <img alt="charger" class="img-thumbnail" src="{{ 'charger.png' | theme_image_url }} " width="300" height="210">
+   <img alt="charger" class="img-thumbnail img-responsive" src="{{ 'charger.jpg' | theme_image_url }} ">
+   <img alt="charger" class="img-thumbnail img-responsive" src="{{ 'entrada.jpg' | theme_image_url }} ">
    </div>
 
    {%editable_text exchange%}
@@ -219,7 +221,7 @@ position: 3
     </p>
    {%endeditable_text%}
   
- 
+</div>
 </div>
 {% endblock %}
 {% endblock %}
