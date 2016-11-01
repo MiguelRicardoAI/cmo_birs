@@ -3,7 +3,11 @@ url= 'https://workshops.birs.ca/events/location/CMO.json'
 $.ajax url,
         success  : (data, status, xhr) ->
              for prop , val of data
+<<<<<<< HEAD
                 if ( (toYear(val.start_date) == toYear(thisYear())) and (prop <= momnt()-2) and (prop) >= momnt()-2)
+=======
+                if ( (toYear(val.start_date) == toYear(thisYear())) and (prop <= momnt()-4) and (prop) >= momnt()-4)
+>>>>>>> feature/cmo
                                 workshop_home = '<a href="http://www.birs.ca/events/2016/5-day-workshops/' + val.code + '">' + val.name + '</a>'
                                 workshop_press = '<a href="http://www.birs.ca/events/2016/5-day-workshops/' + val.code + '/press"> Press Release </a>'
                                 workshop_dates = toMonth(val.start_date) + ' - ' + toMonth(val.end_date) + ' , ' + toYear(val.end_date)
@@ -20,7 +24,11 @@ $.ajax url,
         success  : (data, status, xhr) ->
             for prop , val of data
                 if (toYear(val.start_date) == toYear(thisYear()))
+<<<<<<< HEAD
                     if (toDate(val.start_date) < thisYear()) and (prop >= (momnt()-6) and prop <= (momnt()-3) )
+=======
+                    if (toDate(val.start_date) < thisYear()) and (prop >= (momnt()-8) and prop <= (momnt()-5) )
+>>>>>>> feature/cmo
                         document.getElementById("last").innerHTML +="<div class='col-md-12'><div class='col-md-3'><img class='img-thumbnail' src='https://www.birs.ca/cmo-workshops/2016/#{val.code}/groupphoto.thumb.jpg'/></div><div class='col-md-9'><b>Workshop</b><a href='https://www.birs.ca/events/2016/5-day-workshops/#{val.code}'> #{val.name} </a><p></p><a href='http://www.birs.ca/events/2016/5-day-workshops/#{val.code}/press'> Press Release </a>"+toMonth(val.start_date)+" - "+toMonth(val.end_date)+" , "+" 2016  &#183; <a href='https://www.birs.ca/events/2016/5-day-workshops/#{val.code}'>#{val.code}</a></br> </div></div>"
                     else if (prop > (momnt()-2) and prop <= (momnt()+2))
                         document.getElementById("upcoming").innerHTML +="<br><b>Workshop</b>: <a href='https://www.birs.ca/events/2016/5-day-workshops/#{val.code}'>#{val.name}</a> "+toMonth(val.start_date)+" - "+toMonth(val.end_date)+", 2016 </br>"

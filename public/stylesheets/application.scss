@@ -15,7 +15,7 @@ footer p {
   text-align: center;
 }
 //margin top y bottom
-span{
+span.vino{
 	border-bottom: 1px solid #cccccc;
   color: #800000;
   font-family: "Times",Times New Roman,serif;
@@ -126,10 +126,21 @@ iframe{
   width: 18%;
   text-align: left;
 }
+<<<<<<< HEAD
 
 .containertext{
   margin-top: 30%;
 }
 
+=======
+>>>>>>> feature/cmo
 
-
+.containertext{
+  margin-top: 30%;
+}
+.no-wr{
+  margin-left: -30px;
+}
+.no-wr2{
+  margin-left: -45px;
+}

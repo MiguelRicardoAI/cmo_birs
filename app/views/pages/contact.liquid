@@ -13,11 +13,13 @@ position: 8
 <div class="containertext col-md-12">
 
   <div class="space center">
-    <span>
-      Contact us
-    </span>
+
+    {{ 'span(vino). Contact us' | textile}}
+
   </div>
+  
   <div class="col-md-offset-2 col-md-4 ">
+    {% editable_text "CMO_contact", rows: 40 %}
     <p>CMO</p>
     <p><b> Interim Director:</b></p>
     <p>Dr. José Antonio De la Peña Mena</p>
@@ -43,8 +45,12 @@ position: 8
     <p>CMO OFFICE</p>
     <p>Calle Hidalgo #21 Col. San Felipe del Agua</p>
     <p>C.P. 68020 Oaxaca, Oax. Mexico</p>
+    {% endeditable_text %}
+
   </div>
   <div class="col-md-5 col-md-offset-1">
+
+    {% editable_text "BIRS_contact", rows:40 %}
     <p>BIRS</p>
     <p><b>Scientific Director:</b></p>
     <p>Dr. Nassif Ghoussoub</p>
@@ -71,8 +77,41 @@ position: 8
     <p>c/o The Banff Centre Room 103, TransCanada Pipelines Pavilion</p>
     <p>107 Tunnel Mountain Drive Box 1020  Stn 48 </p>
     <p>Banff  AB  T1L 1H5, Canada</p>
+    {% endeditable_text %}
+
   </div>
 </div><!--container-->
+</div><!--container-->
+
+
+<div class="new">
+    <div class="row col-md-9 col-md-offset-2">
+         {% model_form 'customer_messages', success: '/', error: '/contact' %}
+
+          {% if customer_message.errors %}
+            <div class="alert alert-danger" role="alert">The following errors occured</div>
+            <ul>
+            {% for error in customer_message.errors %}
+              <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <input type="text" class="form-control" name="content[name]" placeholder="Name" aria-describedby="sizing-addon2" value="{{customer_message.name}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <input type="text" class="form-control" name="content[email]" placeholder="Email" aria-describedby="sizing-addon2" value="{{customer_message.email}}">
+            </div>
+            <textarea name="content[message]" class="form-control" rows="3" placeholder="message">{{customer_message.message}}</textarea>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+        {% endmodel_form %}
+    </div>
+</div><!--end New-->
+
+
 </div><!--container-->
 
 

@@ -3,13 +3,26 @@ $('#table_schedule').hide()
 $('#table_confirmed').hide()
 $('#press').hide()
 $('#vidplayer').hide()
+<<<<<<< HEAD
 
 $.ajax 'https://workshops.birs.ca/events/16w5153.json',
+=======
+codeEvent =() ->
+    getEvent = getElementById("codeEvent").value
+
+idEvent = codeEvent()
+
+$.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+>>>>>>> feature/cmo
     success  : (data, status, xhr) ->
         for prop,val of data
             data_event = '<p><span>'+data["event"].name+'('+data['event'].code+')</span></p>'
             info_event = 'Arriving in Oaxaca, Mexico '+get_date(data["event"].start_date)+' and departing '+get_date(data["event"].end_date)+' , '+toYear(data["event"].start_date)
+<<<<<<< HEAD
             thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/16w5153/groupphoto.jpg"></img></p>'    
+=======
+            thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/'+idEvent+'/groupphoto.jpg"></img></p>'    
+>>>>>>> feature/cmo
             objectives_event = '<span> Objectives </span><p>'+data["event"].description+'</p>' 
             document.getElementById("event").innerHTML =  data_event+info_event+thumbnail_event+objectives_event
     error    : (xhr, status, err) ->
@@ -23,7 +36,7 @@ $('.schedule').on 'click', (event) =>
     $('#table_confirmed').hide()
     $('#press').hide()
     $('#table_schedule').show()
-    $.ajax 'https://workshops.birs.ca/events/16w5153/schedule.json',
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'/schedule.json',
             success  : (data, status, xhr) ->
                 for prop, val of data
                     time = val['start_time']
@@ -58,7 +71,11 @@ $('.pressr').on 'click', (event) =>
     $('#table_schedule').hide()
     $('#table_confirmed').hide()
     $('#press').show()
+<<<<<<< HEAD
     $.ajax 'https://workshops.birs.ca/events/16w5153.json',
+=======
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+>>>>>>> feature/cmo
         success  : (data, status, xhr) ->
                 confirmed_participants = data["event"].press_release
                 document.getElementById("press").innerHTML = confirmed_participants
@@ -89,7 +106,7 @@ $('.participants').on 'click', (event) =>
     $('#press').hide()
     $('#table_schedule').hide()
     $('#table_confirmed').show()
-    $.ajax 'https://workshops.birs.ca/events/16w5153.json',
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
         success  : (data, status, xhr) ->  
             for i in [0...40]
                 confirmed_participants ='<tr><td><a href='+data['members'][i].url+'>'+data['members'][i].lastname+' , '+data['members'][i].firstname+'</a></td><td>'+data['members'][i].affiliation+'</td></tr>'

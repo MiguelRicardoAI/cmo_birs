@@ -1,0 +1,96 @@
+---
+title: feria2016
+is_layout: true
+---
+{% extends 'layouts/others' %}
+{% block content %}
+
+<div class="container space">
+	<div class="containertext space">
+		<div class="col-md-12">
+			<div class="space">
+			<p>
+			{{ 'span(vino). FERIA DE MATEMÁTICAS OAXACA 2016' | textile }}
+			</p>
+			<p>
+			{{ 'span(vino). ¿Qué es?' | textile }}
+			</p>
+			</div>
+		</div>
+		{% editable_text "what_is", rows:20 %}
+		<p>
+			La feria matemática es un espacio destinado para brindar la oportunidad a todos los estudiantes, profesores, instituciones y público en general en apoyar y participar en las diferentes actividades que promueven la importancia, la utilidad y la belleza de las matemáticas.
+		</p>
+		{% endeditable_text %}
+
+
+		<div class="center">
+		{% editable_text "date", rows:2 %}
+			<h4>Fecha</h4>18, 19 y 20 de Noviembre
+			<h4>Lugar</h4>Casa de la cultura oaxaqueña
+			<h4>Hora</h4>10:00 hrs a 16:00 hrs
+		{% endeditable_text	%}
+		</div>
+
+		<img alt="poster" class="img-thumbnail" src="{{ 'poster_feria_2016.jpg' | theme_image_url }}">
+		<div class="center">
+			<a class="btn btn-success" href="{{ 'poster_feria_2016.pdf' | theme_image_url }}" role="button" target="blank">Descargar poster</a>
+			<p><a href="https://goo.gl/maps/E2eAeawErQs"> Mapa del lugar</a></p>
+			<p>Escribenos: <a href="mailto:feriademate.oax@gmail.com">feriademate.oax@gmail.com</a></p>
+		</div>
+		
+		<span class="vino">Talleres</span>
+		{% editable_text "schedule", rows:2 %}
+		<div class="schedule">
+			<table class="table table-bordered table-responsive">
+				<tbody>
+					<tr>
+						<th>
+							Taller
+						</th>
+						<th>
+							Descripción
+						</th>
+						<th>
+							Instructor
+						</th>
+					</tr>
+					<tr>
+						<td>BURBUJAS</td>
+						<td>Taller para niños menores de 15 años</td>
+						<td>Javier Hernandez</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		{% endeditable_text %}
+		<a class="btn btn-success" href="" role="button" target="blank">Descargar Talleres</a>
+
+		
+			<p><span class="vino">Horario</span></p>
+			<div class="horario">
+				<table class="table table-bordered table-responsive">
+					<tbody>
+						<tr>
+							<th>Hora</th>
+							<th>Día</th>
+						</tr>
+						<tr>
+							<td>11:00-12:00</td>
+							<td>desayuno</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<a class="btn btn-success" href="" role="button" target="blank">Descargar Horario</a>
+
+			<div class="video center">
+				<span class="vino">Video Feria Matemática 2015</span> 
+				<p><script src="//fast.wistia.com/embed/medias/k47xoyx89b.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_k47xoyx89b popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:113px;width:150px">&nbsp;</span></p>
+			</div>
+			
+	</div>
+</div>
+
+{% endblock %}
+

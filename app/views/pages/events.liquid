@@ -14,10 +14,11 @@ position: 5
 
 {% block content %}
 
-{% block header%}
+
 <!-- HACER PASADOS Y FUTUROS EVENTOS-->
 <div class="container">
 <div class="containertext">
+<<<<<<< HEAD
   <div class="col-md-8 space">
     <p>The CMO Math Fair 2015, attended by over 5000 participants from Oaxaca and Mexico.</p>
     <p>CMO celebrated Pi Day at downtown Oaxaca.</p>
@@ -36,8 +37,44 @@ position: 5
   </div>
 
 </div>
+=======
+  <div class="col-md-12 space">
+    
+    {{ 'span(vino). Upcoming Events' | textile }}
+
+    {% editable_text "upcoming_events", rows:30 %}
+    <p>
+      The CMO Math Fair 2016, Oaxaca-México: 
+      <a href="feria2016">Feria Matemática Oaxaca 2016</a>
+    </p>
+    {% endeditable_text %}
+
+    {{ 'span(vino). Past Events' | textile }}
+
+    {% editable_text "past_events", rows:30 %}
+    <p>
+      Congress of Geometry Algebraic: 
+      <a href="">Congreso de Geometría</a>
+    </p>
+    <p>
+      CMO Received 50 students from Latin America and the Caribean:
+      <a href="http://emalca2016.eventos.cimat.mx/">Emalca at CMO</a>
+    </p>
+    <p>
+      CMO celebrated Pi Day at downtown Oaxaca:
+      <a href="http://www.birs.ca/cmo/cmo-piday-2016">Dia de pi</a>
+    </p>
+    <p>
+      The CMO Math Fair 2015, attended by over 5000 participants from Oaxaca and México:
+      <a href="http://cmo.cimat.mx/FeriaDeMatematicas">Feria Matemáticas 2015</a>
+    </p>
+    {% endeditable_text %}
+
+  </div>
+
+>>>>>>> feature/cmo
+</div>
 </div>
 
-{% endblock%}
 
 {% endblock %}
