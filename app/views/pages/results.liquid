@@ -1,0 +1,21 @@
+---
+title: Results
+is_layout: true
+listed: true
+published: false
+---
+{% extends 'layouts/default' %}
+
+{% block content %}
+
+<form action="/{{ locale }}/search" method="GET">
+  <label for="search">Search</label>
+  <input type="text" name="search" id="search">
+  <input type="submit" value="Search">
+</form>
+
+
+
+{% endblock %}
+
+

@@ -9,422 +9,411 @@ position: 6
 
 
 <div class="container justy">
-  <div class="col-md-9">
+  <div class="containertext">
+    <div class="col-md-9">
+      <div class="space "></div>
+        {% editable_text "questions", rows:20 %} <!--e1-->
+          <p>
+            For answers to the most common participant inquiries here is the site, Any other queries about the logistics on site in Oaxaca should be directed to <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>.
+          </p>
+          <p>
+            Please note that while BIRS provides logistical support for the activities at CMO, is not responsible for any aspect of its local operations. Participants assume responsibility for their own travel and well-being as is customary for conferences of this nature.
+          </p>
+        {% endeditable_text %}<!--e1-->
 
-  {% editable_text questions %} <!--e1-->
-    <div class="space "></div>
-    <p>
-      For answers to the most common participant inquiries here is the site, Any other queries about the logistics on site in Oaxaca should be directed to <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>.
-    </p>
-    <p>
-      Please note that while BIRS provides logistical support for the activities at CMO, is not responsible for any aspect of its local operations. Participants assume responsibility for their own travel and well-being as is customary for conferences of this nature.
-    </p>
-  {% endeditable_text %}<!--e1-->
+        <a id="about"></a>
+        <p>{{ 'span(vino). About BIRS' | textile }}</p>
 
-    <a id="about"></a>
-    <p>
-      <span>
-        About BIRS
-      </span>
-    </p>
+        {% editable_text "about", rows:30 %} <!--e2-->
+          <p>
+            The Banff International Research Station for Mathematical Innovation and Discovery (BIRS) is a joint Canada-US-
+            Mexico initiative that seeks to bring together people from a wide range of mathematical, scientific and industry backgrounds and to create a forum for the exchange of knowledge and methods between these specialists.
+          </p>
+          <p>
+            For information relating to the history, mandate, governance, and program descriptions of BIRS, feel free to explore our website at: <a href="/about">http://www.birs.ca/about</a>.
+          </p>
+          <p>
+            Please note that while BIRS provides logistical support for the activities at CMO, is not responsible for any aspect of its local operations. Participants assume responsibility for their own travel and well being as is customary for conferences of this nature.
+          </p>
+        {% endeditable_text %} <!--e2-->
 
-  {% editable_text about %} <!--e2-->
-    <p>
-      The Banff International Research Station for Mathematical Innovation and Discovery (BIRS) is a joint Canada-US-
-      Mexico initiative that seeks to bring together people from a wide range of mathematical, scientific and industry backgrounds and to create a forum for the exchange of knowledge and methods between these specialists.
-    </p>
-    <p>
-      For information relating to the history, mandate, governance, and program descriptions of BIRS, feel free to explore our website at: <a href="/about">http://www.birs.ca/about</a>.
-    </p>
-    <p>
-      Please note that while BIRS provides logistical support for the activities at CMO, is not responsible for any aspect of its local operations. Participants assume responsibility for their own travel and well being as is customary for conferences of this nature.
-    </p>
-  {% endeditable_text %} <!--e2-->
+        <a id="aboutcmo"></a>
+        {{ 'span(vino). About CMO'}}
 
-    <a id="aboutcmo"></a>
-    <span>
-      About CMO
-    </span>
+        {% editable_text "about_cmo", rows:10 %}<!--e3-->
+          <p>
+            Casa Matemática Oaxaca (CMO) is an International research facility affiliated with the Banff International Research Station (BIRS) of Canada. CMO will host scientific activities and gather mathematicians from around the world in an environment that will promote innovative ideas in the mathematics field. CMO will also support activities to promote local development through research and teaching of mathematics.
+          </p>
+        {% endeditable_text %}<!--e3-->
 
-  {% editable_text aboutcmo %}<!--e3-->
-    <p>
-      Casa Matemática Oaxaca (CMO) is an International research facility affiliated with the Banff International Research Station (BIRS) of Canada. CMO will host scientific activities and gather mathematicians from around the world in an environment that will promote innovative ideas in the mathematics field. CMO will also support activities to promote local development through research and teaching of mathematics.
-    </p>
-    {% endeditable_text %}<!--e3-->
+        <a id="acommodation"></a>
+        {{ 'span(vino). Accommodation ' | textile }}
 
-    <a id="acommodation"></a>
-    <span>
-      Accommodation
-    </span>
+        {% editable_text "acommodation", rows:30 %}
+          <p>
+             Accommodation is at the Hotel Hacienda Los Laureles and Hotel Angel Inn, in Oaxaca city. Accommodation and meals are provided free of charge during the workshop dates (Sunday night to mid-day Friday), for invited participants only. If you bring guests, they will have to pay for their own meals. As well, there will be an additional room charge per night for guests.
+           </p>
+           <p>
+            If you wish to arrive before the workshop begins or stay after the workshop ends, you must arrange and pay for your own accommodation.
+          </p>
+          <p>
+            Hotel Hacienda Los Laureles and Hotel Angel Inn will offer a special rate for CMO-BIRS participants; however, due to other workshops, there may not be availability. CMO-BIRS participants are also able to receive special rates at the nearby Hotel Casa Bonita. Other accommodation may be found using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a>.
+          </p>
+          <p>
+            For rates and other useful information regarding accommodation and guest <a href="hotels">click here</a>.
+          </p>
+        {% endeditable_text %}
 
-  {% editable_text acommodation %}<!--e4-->
-    <p>
-       Accommodation is at the Hotel Hacienda Los Laureles and Hotel Angel Inn, in Oaxaca city. Accommodation and meals are provided free of charge during the workshop dates (Sunday night to mid-day Friday), for invited participants only. If you bring guests, they will have to pay for their own meals. As well, there will be an additional room charge per night for guests.
-     </p>
-     <p>
-      If you wish to arrive before the workshop begins or stay after the workshop ends, you must arrange and pay for your own accommodation.
-    </p>
-    <p>
-      Hotel Hacienda Los Laureles and Hotel Angel Inn will offer a special rate for CMO-BIRS participants; however, due to other workshops, there may not be availability. CMO-BIRS participants are also able to receive special rates at the nearby Hotel Casa Bonita. Other accommodation may be found using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a>.
-    </p>
-    <p>
-      For rates and other useful information regarding accommodation and guest <a href="hotels">click here</a>.
-    </p>
-    <p>
-        <b>
-          Where will I be staying?
-        </b>
-    </p>
-    <p>
-      Participants of CMO workshops will stay at one of two hotels in Oaxaca: the <a href="http://haciendaloslaureles.com">Hotel Hacienda Los Laureles</a> or the <a href="http://www.hotelangelinn.com">Hotel Angel Inn</a>. You will receive notice in your registration package (approximately four weeks in advance) to which hotel you have been assigned.
-    </p>
-    <p>
-      All of the designated hotels are located within a close vicinity to the workshop venue. If for any accessibility or other reason you are unable to walk (approximately 10 minutes) by foot and would need to stay at the closest hotel, please indicate this preference at least two weeks prior to the workshop start date (to <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>) and we will do our best to accommodate you.
-    </p>
-    <p>
-      <b>
-        For how long can I stay at the facility?
-      </b>
-    </p>
-    <p>
-      Participants in 5-day workshops can check into their hotel on Sunday and typically remain until the Friday of the same week.
-    </p>
-    <p>
-      If you plan to arrive before Sunday or intend to remain in Oaxaca or Mexico beyond Friday, please note that you will be expected to book your own accommodation. Hotel Hacienda Los Laureles and Hotel Angel Inn will offer a special rate for CMO-BIRS participants; however, due to other workshops, there may not be availability.CMO-BIRS participants are also able to receive special rates at the nearby Hotel Casa Bonita. Other accommodation may be found using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a>.
-    </p>
-    <p>
-      <b>
-        May I bring a guest?
-      </b>
-    </p>
-    <p>
-      Yes. However, please note that if you bring guests, they will have to pay for their own meals. As well, there will be an additional room charge per night for guests: Hotel Hacienda Los Laureles - 700 Mexican pesos (including taxes); Hotel Angel Inn - 238 Mexican pesos (including taxes).
-    </p>
-    <p>
-      <b>
-        Do I need to stay in CMO's accommodation?
-      </b>
-    </p>
-    <p>
-      Accommodation at the Hotel Hacienda Los Laureles is automatically granted to all workshop participants. If, however, you do not feel that such accommodation is right for you, a number of alternatives are available. CMO recommends using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a> to find alternatives.
-    </p>
-    <p>
-      <b>
-        What sorts of amenities are available in my room?
-      </b>
-    </p>
-    <p>
-      Each room has air conditioning/heating, towels, cotton bathrobes, hairdryer, soaps and shampoos, classic-style furnishings, 25 inch color television, wireless Internet in all areas and office center.
-    </p>
-    <p>
-      <b>
-        Is there a way for me to get my laundry done at the hotel?
-      </b>
-    </p>
-    <p>
-      Yes. Laundry services are available to all hotel guests.
-    </p>
-    <p>
-      <b>
-        If I have mobility issues, will I be able to navigate the CMO and hotel accommodation?
-      </b>
-    </p>
-    <p>
-      Please include your request in your registration, at least two weeks in advance, and confirm via email at <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>.
-    </p>
-    <p>
-      <b>
-        Is there a telephone line through which I can be reached during my stay with CMO?
-      </b>
-    </p>
-    <p>
-      Yes, there will be a telephone in each room. Once you have received your hotel assignment, you may have your calls directed either to Hotel Hacienda Los Laureles: +52 951 501-5300 or Hotel Angel Inn: +52 951 133-6128 or +52 951 133-6129.
-    </p>
-    {% endeditable_text %} <!--e4-->
+          <p><b>Where will I be staying?</b></p>
+        {% editable_text "staying", rows:20 %}
+          <p>
+            Participants of CMO workshops will stay at one of two hotels in Oaxaca: the <a href="http://haciendaloslaureles.com">Hotel Hacienda Los Laureles</a> or the <a href="http://www.hotelangelinn.com">Hotel Angel Inn</a>. You will receive notice in your registration package (approximately four weeks in advance) to which hotel you have been assigned.
+          </p>
+          <p>
+            All of the designated hotels are located within a close vicinity to the workshop venue. If for any accessibility or other reason you are unable to walk (approximately 10 minutes) by foot and would need to stay at the closest hotel, please indicate this preference at least two weeks prior to the workshop start date (to <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>) and we will do our best to accommodate you.
+          </p>
+        {% endeditable_text %}
+          
+          <p><b>For how long can I stay at the facility?</b></p>
 
-    <a id="meals"></a>
-    <span>Meals</span>
+        {% editable_text "facility", rows:20 %}
+          <p>
+            Participants in 5-day workshops can check into their hotel on Sunday and typically remain until the Friday of the same week.
+          </p>
+          <p>
+            If you plan to arrive before Sunday or intend to remain in Oaxaca or Mexico beyond Friday, please note that you will be expected to book your own accommodation. Hotel Hacienda Los Laureles and Hotel Angel Inn will offer a special rate for CMO-BIRS participants; however, due to other workshops, there may not be availability.CMO-BIRS participants are also able to receive special rates at the nearby Hotel Casa Bonita. Other accommodation may be found using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a>.
+          </p>
+        {% endeditable_text %}
 
-    {% editable_text meals %}<!--e5-->
-    <p>
-      <b>
-        Where and how do I get my meals?
-      </b>
-    </p>
-    <p>
-      Lunch and dinner will be at Hotel Hacienda Los Laureles. Breakfast will be at your assigned hotel. CMO participants will receive a scheduled breakfast, lunch and dinner, for which the menu will be fixed (ie. you will not have a choice of options). If you have any dietary restrictions, please include your request in your online registration or via email at <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>, at least two weeks in advance.
-    </p>
-    <p>
-      <b>
-        What are the meal costs for guests?
-      </b>
-    </p>
-    <p>
-      If your guest wishes to join you for meals he/she will be able to receive the fixed participant meal (see list of prices) or may order off the regular hotel menu with a special discount of 20% at Hotel Hacienda Los Laureles and 10% discount at Hotel Angel Inn.
-    </p>
-    <p>
-      <b>
-        MEALS FOR EXTRA PERSON AT HOTEL HACIENDA LOS LAURELES:
-      </b>
-    </p>
-      <ul>
+          <p><b>May I bring a guest?</b></p>
+
+        {% editable_text "gest", rows:10 %}
+          <p>
+            Yes. However, please note that if you bring guests, they will have to pay for their own meals. As well, there will be an additional room charge per night for guests: Hotel Hacienda Los Laureles - 700 Mexican pesos (including taxes); Hotel Angel Inn - 238 Mexican pesos (including taxes).
+          </p>
+        {% endeditable_text %}
+
+          <p><b>Do I need to stay in CMO's accommodation?</b></p>
+
+        {% editable_text "accommodation", rows: 20 %}
+          <p>
+            Accommodation at the Hotel Hacienda Los Laureles is automatically granted to all workshop participants. If, however, you do not feel that such accommodation is right for you, a number of alternatives are available. CMO recommends using <a href="http://www.tripadvisor.ca/Hotels-g150801-Oaxaca_Southern_Mexico-Hotels.html">Trip Advisor</a> to find alternatives.
+          </p>
+        {% endeditable_text %}
+
+          <p><b>What sorts of amenities are available in my room?</b></p>
+
+        {% editable_text "available_room", rows: 30 %}  
+          <p>
+            Each room has air conditioning/heating, towels, cotton bathrobes, hairdryer, soaps and shampoos, classic-style furnishings, 25 inch color television, wireless Internet in all areas and office center.
+          </p>
+          <p>
+            <b>
+              Is there a way for me to get my laundry done at the hotel?
+            </b>
+          </p>
+          <p>
+            Yes. Laundry services are available to all hotel guests.
+          </p>
+          <p>
+            <b>
+              If I have mobility issues, will I be able to navigate the CMO and hotel accommodation?
+            </b>
+          </p>
+          <p>
+            Please include your request in your registration, at least two weeks in advance, and confirm via email at <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>.
+          </p>
+          <p>
+            <b>
+              Is there a telephone line through which I can be reached during my stay with CMO?
+            </b>
+          </p>
+          <p>
+            Yes, there will be a telephone in each room. Once you have received your hotel assignment, you may have your calls directed either to Hotel Hacienda Los Laureles: +52 951 501-5300 or Hotel Angel Inn: +52 951 133-6128 or +52 951 133-6129.
+          </p>
+        {% endeditable_text %} 
+
+          <a id="meals"></a>
+          {{ 'span(vino). Meals' | textile }}
+
+          <p><b>Where and how do I get my meals?</b></p>
+
+        {% editable_text "meals", rows:50 %}
+          <p>
+            Lunch and dinner will be at Hotel Hacienda Los Laureles. Breakfast will be at your assigned hotel. CMO participants will receive a scheduled breakfast, lunch and dinner, for which the menu will be fixed (ie. you will not have a choice of options). If you have any dietary restrictions, please include your request in your online registration or via email at <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>, at least two weeks in advance.
+          </p>
+          <p>
+            <b>
+              What are the meal costs for guests?
+            </b>
+          </p>
+          <p>
+            If your guest wishes to join you for meals he/she will be able to receive the fixed participant meal (see list of prices) or may order off the regular hotel menu with a special discount of 20% at Hotel Hacienda Los Laureles and 10% discount at Hotel Angel Inn.
+          </p>
+          <p>
+            <b>
+              MEALS FOR EXTRA PERSON AT HOTEL HACIENDA LOS LAURELES:
+            </b>
+          </p>
+            <ul>
+              
+              <li>
+                Breakfast: $120.00
+              </li>
+              <li>
+                Lunch: $180.00
+              </li>
+              <li>
+                Dinner $180.00
+              </li>
+              
+            </ul>
+          <p>
+            <b>
+              *All prices are in Mexican Pesos and all taxes included.
+            </b>
+          </p>
+          <p>
+            <b>
+              MEALS FOR EXTRA PERSON AT HOTEL ANGEL INN:
+            </b>
+          </p>
+            <ul>
+              
+              <li>
+                Breakfast: $110.00
+              </li>
+              
+            </ul>
+          <p>
+            <b>
+              *All prices are in Mexican Pesos and all taxes included.
+            </b>
+          </p>
+        {% endeditable_text %} 
+
+          <a id="travel">  </a>
+          <span class="vino">Travel</span>
+
+          <p><b>Do I need a visa in order to come to CMO?</b></p>
         
-        <li>
-          Breakfast: $120.00
-        </li>
-        <li>
-          Lunch: $180.00
-        </li>
-        <li>
-          Dinner $180.00
-        </li>
-        
-      </ul>
-    <p>
-      <b>
-        *All prices are in Mexican Pesos and all taxes included.
-      </b>
-    </p>
-    <p>
-      <b>
-        MEALS FOR EXTRA PERSON AT HOTEL ANGEL INN:
-      </b>
-    </p>
-      <ul>
-        
-        <li>
-          Breakfast: $110.00
-        </li>
-        
-      </ul>
-    <p>
-      <b>
-        *All prices are in Mexican Pesos and all taxes included.
-      </b>
-    </p>
+        {% editable_text "travel", rows:10 %}
+          <p>
+            For visa Information please visit <a href="http://www.inm.gob.mx/index">www.inm.gob.mx/index</a>. However, we suggest you check with the Embassy of Mexico in the country of origin for any updated information.
+          </p>
+          <p>
+            If you require a visa support letter please contact: <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>
+          </p>
+        {% endeditable_text %}
 
-    {% endeditable_text %} <!--e5-->
+          <p><b>Where can I find information for travel funding?</b></p>
 
-   <a id="travel">  </a>
-    <span>Travel</span>
-
-  {% editable_text travel%} <!--e6-->
-    <p>
-      <b>
-        Do I need a visa in order to come to CMO?
-      </b>
-    </p>
-    <p>
-      For visa Information please visit <a href="http://www.inm.gob.mx/index">www.inm.gob.mx/index</a>. However, we suggest you check with the Embassy of Mexico in the country of origin for any updated information.
-    </p>
-    <p>
-      If you require a visa support letter please contact: <a href="mailto:cmo-birs@cimat.mx">cmo-birs@cimat.mx</a>
-    </p>
-    <p>
-      <b>
-        Where can I find information for travel funding?
-      </b>
-    </p>
-    <p>
-      Although CMO provides meals and accommodation to workshop participants free of cost, it unfortunately cannot subsidize travel costs to and from Oaxaca and Hotel Hacienda Los Laureles.
-    </p>
-    <p>
-      <b>
-        Where do I check in for the workshop?
-      </b>
-    </p>
-    <p>
-      For lodging at your assigned hotel:
-    </p>
-    <p>
-      <u>
-        Hotel Hacienda Los Laureles
-        <b>
-          Check-in is from 3:00 pm
-        </b>
-      </u>
-    </p>
-    <p>
-      The hotel is located at: Calle Hidalgo # 21, San Felipe del Agua, C.P. 68020 Oaxaca, Oax.
-    </p>
-    <p>
-      Tel: (52) 951 501 5300 or (52) 951 520 0890
-    </p>
-    <p>
-      <u>
-        Hotel Angel Inn
-        <b>
-          Check-in is from 2:00 pm
-        </b>
-      </u>
-    </p>
-    <p>
-      The hotel is located at: Calle Hidalgo # 204, San Felipe del Agua, C.P. 68020 Oaxaca, Oax.
-    </p>
-    <p>
-      Tel: (52) 951 133 6128 or (52) 133 6129
-    </p>
-    <p>
-      <b>
-        Where do I go for the workshop?
-      </b>
-    </p>
-    <p>
-      San Felipe Conference Room at Hotel Hacienda Los Laureles.
-    </p>
-    <p>
-  <a id="mexicans"> </a>
-      <b>
-        What are my transportation options for getting to CMO?
-      </b>
-    </p>
-    <p>
-      Book your flight to the Xoxocotlán International Airport (OAX), in Oaxaca. For detailed information on transportation to your hotel, please <a href="oaxaca">please click here</a>.
-    </p>
- <!--e6-->
+        {% editable_text "travel_funding", rows:20 %}
+          <p>
+            Although CMO provides meals and accommodation to workshop participants free of cost, it unfortunately cannot subsidize travel costs to and from Oaxaca and Hotel Hacienda Los Laureles.
+          </p>
+          <p>
+            <b>
+              Where do I check in for the workshop?
+            </b>
+          </p>
+          <p>
+            For lodging at your assigned hotel:
+          </p>
+          <p>
+            <u>
+              Hotel Hacienda Los Laureles
+              <b>
+                Check-in is from 3:00 pm
+              </b>
+            </u>
+          </p>
+          <p>
+            The hotel is located at: Calle Hidalgo # 21, San Felipe del Agua, C.P. 68020 Oaxaca, Oax.
+          </p>
+          <p>
+            Tel: (52) 951 501 5300 or (52) 951 520 0890
+          </p>
+          <p>
+            <u>
+              Hotel Angel Inn
+              <b>
+                Check-in is from 2:00 pm
+              </b>
+            </u>
+          </p>
+          <p>
+            The hotel is located at: Calle Hidalgo # 204, San Felipe del Agua, C.P. 68020 Oaxaca, Oax.
+          </p>
+          <p>
+            Tel: (52) 951 133 6128 or (52) 133 6129
+          </p>
+          <p>
+            <b>
+              Where do I go for the workshop?
+            </b>
+          </p>
+          <p>
+            San Felipe Conference Room at Hotel Hacienda Los Laureles.
+          </p>
+          <p>
+        <a id="mexicans"></a>
+            <b>
+              What are my transportation options for getting to CMO?
+            </b>
+          </p>
+          <p>
+            Book your flight to the Xoxocotlán International Airport (OAX), in Oaxaca. For detailed information on transportation to your hotel, please <a href="oaxaca">please click here</a>.
+          </p>
+        {% endeditable_text %}
 
 
-  <span>Mexican Candidates.</span>
-  <p>
-    Si Usted es mexicano o residente mexicano y está interesado en participar en alguno de los talleres del Programa de Conferencias 2016 de Casa Matemática Oaxaca (CMO), lo invitamos a descargar nuestro formato de postulación <a href="http://www.birs.ca/files/CMO/Mexican%20Researchers%20Proposal%20Form%20CMO-BIRS%202016.pdf">aquí</a>.
-  </p>
-  <p>
-    Favor de enviar su formato de postulación al correo electrónico: <a href="mailto:candidatos.cmobirs@cimat.mx">candidatos.cmobirs@cimat.mx.</a>
-  </p>
-  <p>
-    Para ver el Programa de Conferencias 2016 de Casa Matemática Oaxaca hacer <a href="http://www.birs.ca/files/publications/posters/BIRSCMOPoster2016.pdf">click aqui</a>.
-  </p>
-    
-    
-    {% endeditable_text %} <!--e8-->
+          <span class="vino">Mexican Candidates.</span>
 
-    <a id="workshop"> </a>
-    <span>Workshop Information</span>
-    <p>
-      <b>
-        I would like to participate in a workshop. Can I register somewhere?
-      </b>
-    </p>
-    <p>
-      Workshop participation is by invitation only. Individual workshop organizers are responsible for drafting lists of potential invitees, not CMO or BIRS directly; however, if you are interested in participating in a particular workshop you can email a BIRS administrator, who will forward your statement of interest to one of the organizers involved. If you are a student we recommend sending a letter of recommendation from your supervisor along with your initial email.
-    </p>
-    <p>
-      <b>
-        Could BIRS send me my invitations and information packages by regular post?
-      </b>
-    </p>
-    <p>
-      BIRS is unfortunately unable to do this, for a number of reasons, particularly due to the sheer volume of information that we require from all participants, compatibility with our online database, and the occasional need for very prompt replies. If a participant is unable to be reached by email on a regular basis, he/she should contact his/her workshop contact organizer to make alternate arrangements.
-    </p>
+        {% editable_text "mexican_candidates", rows:20 %}  
+          <p>
+            Si Usted es mexicano o residente mexicano y está interesado en participar en alguno de los talleres del Programa de Conferencias 2016 de Casa Matemática Oaxaca (CMO), lo invitamos a descargar nuestro formato de postulación <a href="http://www.birs.ca/files/CMO/Mexican%20Researchers%20Proposal%20Form%20CMO-BIRS%202016.pdf">aquí</a>.
+          </p>
+          <p>
+            Favor de enviar su formato de postulación al correo electrónico: <a href="mailto:candidatos.cmobirs@cimat.mx">candidatos.cmobirs@cimat.mx.</a>
+          </p>
+          <p>
+            Para ver el Programa de Conferencias 2016 de Casa Matemática Oaxaca hacer <a href="http://www.birs.ca/files/publications/posters/BIRSCMOPoster2016.pdf">click aqui</a>.
+          </p>
+        {% endeditable_text %}
 
-  <a id="reply"> </a>
-  <span>Reply to an Invitation </span>
-  <p>
-    To accept or decline an invitation to a <a href="http://www.birs.ca/location/cmo/2016/all">CMO workshop</a> (in Mexico), please visit <a href="https://www.birs.ca/cmo-rsvp">https://www.birs.ca/cmo-rsvp</a>. 
-  </p>
+          <a id="workshop"> </a>
+          <span class="vino">Workshop Information</span>
 
-  <a id="testimonials"></a>
-   <span>Testimonials</span>
+        {% editable_text "workshop_info", rows:20 %}
+          <p>
+            <b>
+              I would like to participate in a workshop. Can I register somewhere?
+            </b>
+          </p>
+          <p>
+            Workshop participation is by invitation only. Individual workshop organizers are responsible for drafting lists of potential invitees, not CMO or BIRS directly; however, if you are interested in participating in a particular workshop you can email a BIRS administrator, who will forward your statement of interest to one of the organizers involved. If you are a student we recommend sending a letter of recommendation from your supervisor along with your initial email.
+          </p>
+          <p>
+            <b>
+              Could BIRS send me my invitations and information packages by regular post?
+            </b>
+          </p>
+          <p>
+            BIRS is unfortunately unable to do this, for a number of reasons, particularly due to the sheer volume of information that we require from all participants, compatibility with our online database, and the occasional need for very prompt replies. If a participant is unable to be reached by email on a regular basis, he/she should contact his/her workshop contact organizer to make alternate arrangements.
+          </p>
+        {% endeditable_text %}
 
-    {% editable_text testimonials %} <!--e9-->
-    <p>
-      <b>
-        What is the purpose of the testimonials that participants and organizers are asked to volunteer to write after workshops?
-      </b>
-    </p>
-    <p>
-      The benefits of testimonials are three-fold.
-    </p>
-    <p>
-      For participants, they provide an opportunity to think back on the past few days and to recall and organize one’s thoughts on what was learned throughout their time at CMO.
-    </p>
-    <p>
-      For the workshop community at large, they enable people to see what stood out to their colleagues in each workshop; their colleagues may perhaps emphasize important aspects of the week they hadn’t before considered to be of note.
-    </p>
-    <p>
-      For BIRS and CMO, feedback helps us to see our strengths and our weaknesses. Positive testimonials also enable us to show our sponsors that the funds they have granted us are being put to good use. Testimonials are invaluable to us in the funding renewal process and participants’ taking the time to write one is thus very much appreciated!
-    </p>
-    <p>
-      <b>
-        How do I write a testimonial?
-      </b>
-    </p>
-    <p>
-      You may be contacted directly by email by our Scientific Director, requesting you to give us your input. If so, a link should be included in the email and you need only follow the steps as they appear.
-    </p>
-    <p>
-      If this is not the case, you can access a simple testimonial-writing page via our website at <a href="/feedback">http://www.birs.ca/feedback</a>.
-    </p>
-    <p>
-      <b>
-        What sorts of remarks should I make in a testimonial?
-      </b>
-    </p>
-    <p>
-      The content of a testimonial is largely up to you. Some people choose to write long paragraphs, while other people simply jot down a sentence or two. You can reflect upon the organization of the workshop, the setting and facilities in Oaxaca, the mathematical and scientific aspects of your specific workshop, or whatever else you deem to be appropriate. There are some guidelines on what to include as potential “scientific content” on our online testimonial-writing page at: <a href="/feedback">http://www.birs.ca/feedback</a>.
-    </p>
-    <p>
-      You can see examples of testimonials by following the link on the BIRS homepage, where we publish excerpts of testimonials for the various workshops held in our facilities at <a href="/testimonials/cmo">http://www.birs.ca/testimonials/cmo</a>.
-    </p>
-    <p>
-      We endeavor to preserve the integrity of each testimonial, although we reserve the right to occasionally edit for grammar, clarity or anonymity, where appropriate.
-    </p>
-    {% endeditable_text %} <!--e9-->
+          <a id="reply"> </a>
+          <span class="vino">Reply to an Invitation </span>
+        {% editable_text "reply_invitation", rows: 5 %}
+          <p>
+            To accept or decline an invitation to a <a href="http://www.birs.ca/location/cmo/2016/all">CMO workshop</a> (in Mexico), please visit <a href="https://www.birs.ca/cmo-rsvp">https://www.birs.ca/cmo-rsvp</a>. 
+          </p>
+        {% endeditable_text %}
 
-    <a id="slides"> </a>
-    <div class="space">
-      <span>
-      Publishing Slides to Your CMO Workshop Webpage
-      </span>
-   </div>
+          <a id="testimonials"></a>
+          <span class="vino">Testimonials</span>
+
+        {% editable_text "testimonials", rows: 50 %} 
+          <p>
+            <b>
+              What is the purpose of the testimonials that participants and organizers are asked to volunteer to write after workshops?
+            </b>
+          </p>
+          <p>
+            The benefits of testimonials are three-fold.
+          </p>
+          <p>
+            For participants, they provide an opportunity to think back on the past few days and to recall and organize one’s thoughts on what was learned throughout their time at CMO.
+          </p>
+          <p>
+            For the workshop community at large, they enable people to see what stood out to their colleagues in each workshop; their colleagues may perhaps emphasize important aspects of the week they hadn’t before considered to be of note.
+          </p>
+          <p>
+            For BIRS and CMO, feedback helps us to see our strengths and our weaknesses. Positive testimonials also enable us to show our sponsors that the funds they have granted us are being put to good use. Testimonials are invaluable to us in the funding renewal process and participants’ taking the time to write one is thus very much appreciated!
+          </p>
+          <p>
+            <b>
+              How do I write a testimonial?
+            </b>
+          </p>
+          <p>
+            You may be contacted directly by email by our Scientific Director, requesting you to give us your input. If so, a link should be included in the email and you need only follow the steps as they appear.
+          </p>
+          <p>
+            If this is not the case, you can access a simple testimonial-writing page via our website at <a href="/feedback">http://www.birs.ca/feedback</a>.
+          </p>
+          <p>
+            <b>
+              What sorts of remarks should I make in a testimonial?
+            </b>
+          </p>
+          <p>
+            The content of a testimonial is largely up to you. Some people choose to write long paragraphs, while other people simply jot down a sentence or two. You can reflect upon the organization of the workshop, the setting and facilities in Oaxaca, the mathematical and scientific aspects of your specific workshop, or whatever else you deem to be appropriate. There are some guidelines on what to include as potential “scientific content” on our online testimonial-writing page at: <a href="/feedback">http://www.birs.ca/feedback</a>.
+          </p>
+          <p>
+            You can see examples of testimonials by following the link on the BIRS homepage, where we publish excerpts of testimonials for the various workshops held in our facilities at <a href="/testimonials/cmo">http://www.birs.ca/testimonials/cmo</a>.
+          </p>
+          <p>
+            We endeavor to preserve the integrity of each testimonial, although we reserve the right to occasionally edit for grammar, clarity or anonymity, where appropriate.
+          </p>
+        {% endeditable_text %}
+
+          <a id="slides"> </a>
+          <div class="space">
+            <span class="vino">
+            Publishing Slides to Your CMO Workshop Webpage
+            </span>
+          </div>
    
-   {%editable_text slides%}
-   <p>
-    Participants can contribute their PDF, PowerPoint, or other types of files to their CMO-BIRS workshop web page, using the laptop computer on the table in the main lecture room. On the computer, there is an icon on the desktop named "workshop-webpage", pictured to the right. This is a network file system that is directly connected to the web server, for the current week's 5-day workshop. Simply drag & drop your files onto that icon, and the files will appear on the workshop webpage, under a link named "workshop-website".
-   </p>
-   <p>
-    You should include your last name in the name of the file. This will allow others to identify it easily, and if you recorded a video, the file will appear underneath the video on the website.
-    </p>
-   {%endeditable_text%}
+        {%editable_text "slides", rows:20 %}
+           <p>
+            Participants can contribute their PDF, PowerPoint, or other types of files to their CMO-BIRS workshop web page, using the laptop computer on the table in the main lecture room. On the computer, there is an icon on the desktop named "workshop-webpage", pictured to the right. This is a network file system that is directly connected to the web server, for the current week's 5-day workshop. Simply drag & drop your files onto that icon, and the files will appear on the workshop webpage, under a link named "workshop-website".
+           </p>
+           <p>
+            You should include your last name in the name of the file. This will allow others to identify it easily, and if you recorded a video, the file will appear underneath the video on the website.
+            </p>
+        {%endeditable_text%}
    
-    <a id="computers"> </a>
-    <span>Computers</span>
-    {% editable_text computers%}
-    <p>
-      <b>
-        Are there any computers available for use at the hotels?
-      </b>
-    </p>
-    <p>
-      Yes. There are laptops available at the meeting room in the Hotel Hacienda Los Laureles for participants to use.
-    </p>
-    <b>
-      Can I access the Internet from my laptop while at the hotels?
-    </b>
-    <p>
-      Yes. Each hotel has both ethernet ports as well as wireless internet access.
-    </p>
-    <p>
-      <b>
-        Can I print from my own laptop while at the workshop?
-      </b>
-    </p>
-    <p>
-      No. However, for your convenience, there will be a printer available at Hotel Hacienda Los Laureles that may be used with any of the laptops provided.
-    </p>
-    {%endeditable_text%} 
+            <a id="computers"> </a>
+            <span class="vino">Computers</span>
 
-  </div>
+        {% editable_text "computers", rows: 40 %}
+            <p>
+              <b>
+                Are there any computers available for use at the hotels?
+              </b>
+            </p>
+            <p>
+              Yes. There are laptops available at the meeting room in the Hotel Hacienda Los Laureles for participants to use.
+            </p>
+            <b>
+              Can I access the Internet from my laptop while at the hotels?
+            </b>
+            <p>
+              Yes. Each hotel has both ethernet ports as well as wireless internet access.
+            </p>
+            <p>
+              <b>
+                Can I print from my own laptop while at the workshop?
+              </b>
+            </p>
+            <p>
+              No. However, for your convenience, there will be a printer available at Hotel Hacienda Los Laureles that may be used with any of the laptops provided.
+            </p>
+        {%endeditable_text%} 
 
-
-
+      </div>
 
   <div class="col-md-3 ">
     <div class="space">
-            <span>
-              Quick Links
-            </span>
-          </div>
+        <span class="vino">
+          Quick Links
+        </span>
+    </div>
+
+        {% editable_text "quick_faq", rows:20 %}
           <p>
             <a href="#about">About BIRS</a>
           </p>
@@ -464,7 +453,10 @@ position: 6
           <p>
             <a href="#computers">Computers</a>
           </p>
+        {% endeditable_text %}
+
     </div>
   </div>
+</div>
 
 {% endblock %}

@@ -3,37 +3,39 @@ title: Index
 is_layout: true
 position: 1
 ---
-{% extends 'layouts/default' %}
+{% extends 'layouts/index' %}
 {% block content %}
 
 <div class="container">
+<div class="containertext">
 
-      <div class="col-md-8">
-        <div class="space">
-        <b>
-          News
-        </b>
+      <div class="col-md-9">
+        <div class="space no">
+          {{ 'span(vino). News' | textile}}
         </div>
         <ul>
           <li class="special-announcement">
             <a  class="letterbig" href="workshops">The 2017 Scientific Program in CMO</a>
           </li>
         </ul>
-        <p><b>This Week in CMO</b></p>
+        <p>{{ 'span(vino). This Week in CMO' | textile}}</p>
+        <div class="col-md-12 no-wr">
         <div class="col-md-3 space" id="thumb"></div>
         <div class="col-md-9 space" id="info"></div>
-      </div><!--end div-->
-
+        </div>
+      </div>
 
       <div class="col-md-3 justy space">
         <b>
           What They're Saying About CMO-BIRS
         </b>
         <div class="lettersmall">
-          <blockquote class="lettersmall">          
+          <blockquote class="lettersmall">   
+          {% editable_text "testimonal", rows: 6 %}       
             <p>
               "The workshop was very interesting, especially because it allowed the interaction between a lot of people of different backgrounds to join on a very comfortable space."
             </p>
+          {% endeditable_text %}
             <div class="rigth lettermini">
               <a href="http://www.birs.ca/testimonials/cmo/#testimonial-1840">read more testimonials >> </a>
             </div>
@@ -41,37 +43,27 @@ position: 1
         </div>
       </div>
    
-
-      <div class="col-md-8">
+      <div class="col-md-9">
         <div class="space">
-          <span>
-            Recently at CMO
-          </span>
+        {{ 'span(vino). Recently at CMO' | textile}}
         </div>
-        <div class="col-md-12">
-          <div id="last"></div>
+        <div class="col-md-12 no-wr2">
+          {{ 'div(#last). ' | textile }}
         </div>
-      </div><!--end div-->
-
-    
+      </div>
     
       <div class="col-md-3 lettersmall">
         <div class="space">
-          <span>
-            Upcoming Events
-          </span>
+        {{ 'span(vino). Upcoming Events' | textile}}
         </div>
-        <div id="upcoming"></div>
-      </div><!--end div 2-->
+          {{ 'div(#upcoming). ' | textile }}        
+      </div>
 
-
-
-      <div class="col-md-4 lettersmall">
+      <div class="col-md-3 lettersmall">
         <div class="space">
-          <span>
-            Quick Links
-          </span>
+        {{ 'span(vino). Quick Links' | textile}}            
         </div>
+      {%  editable_text "quick_index", rows:10 %}
         <p>
           <a href="faq">Frequently Asked Questions (FAQ)</a>
         </p>
@@ -84,9 +76,12 @@ position: 1
         <p>
           <a href="workshops">Calendar of All Events</a>
         </p>
+      {% endeditable_text %}
+
       </div>  
 
-    
+  </div>
+
 </div>
 
 {% endblock %}

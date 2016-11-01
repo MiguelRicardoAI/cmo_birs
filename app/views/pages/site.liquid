@@ -5,12 +5,13 @@ position: 3
 ---
 {% extends 'layouts/default' %}
 {% block content %}
-{% block header, short_name: true, priority: 1 %}
-<div class="container">     
+
+<div class="container">
+<div class="containertext col-md-12">     
 
   {%editable_text siteinfo%}
   <div class="space" id="information">  
-  <span>
+  <span class="vino">
     CMO On Site Information
   </span> 
   </div>
@@ -98,7 +99,7 @@ position: 3
   {% editable_text facilities %}
     <a id="facilities"></a>
     <p>
-      <span>
+      <span class="vino">
        CMO Meeting Facilities
       </span>
     </p>
@@ -167,7 +168,7 @@ position: 3
         <img alt="map" class="img-thumbnail" src="{{ 'map.jpg' | theme_image_url }}" width="600" height="420">
     </p>
 
-    <span>
+    <span class="vino">
       Oaxaca
     </span>
     <h3>
@@ -199,7 +200,8 @@ position: 3
    {%endeditable_text%}
 
    <div class="center">
-   <img alt="charger" class="img-thumbnail" src="{{ 'charger.png' | theme_image_url }} " width="300" height="210">
+   <img alt="charger" class="img-thumbnail img-responsive" src="{{ 'charger.jpg' | theme_image_url }} ">
+   <img alt="charger" class="img-thumbnail img-responsive" src="{{ 'entrada.jpg' | theme_image_url }} ">
    </div>
 
    {%editable_text exchange%}
@@ -219,7 +221,7 @@ position: 3
     </p>
    {%endeditable_text%}
   
- 
+</div>
 </div>
 {% endblock %}
 {% endblock %}

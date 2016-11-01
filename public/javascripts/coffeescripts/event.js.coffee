@@ -1,60 +1,102 @@
 #EVENT GENERALS
 $('#table_schedule').hide()
 $('#table_confirmed').hide()
-$.ajax 'https://workshops.birs.ca/events/16w5153.json',
-        success  : (data, status, xhr) ->
-             for prop,val of data
-             	document.getElementById("event").innerHTML = '<span>'+data["event"].name+'('+data['event'].code+')</span>' +'<br/>'+ 'Arriving in Oaxaca, Mexico '+get_date(data["event"].start_date)+' and departing '+get_date(data["event"].end_date)+' '+toYear(data["event"].start_date)+'<img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/16w5153/groupphoto.jpg" />'  
-             #console.log(data[prop][1].firstname)
-        error    : (xhr, status, err) ->
-            console.log("null "+err)
-        complete : (xhr, status) ->
-            console.log("complete")
+$('#press').hide()
+$('#vidplayer').hide()
+codeEvent =() ->
+    getEvent = getElementById("codeEvent").value
+
+idEvent = codeEvent()
+
+$.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+    success  : (data, status, xhr) ->
+        for prop,val of data
+            data_event = '<p><span>'+data["event"].name+'('+data['event'].code+')</span></p>'
+            info_event = 'Arriving in Oaxaca, Mexico '+get_date(data["event"].start_date)+' and departing '+get_date(data["event"].end_date)+' , '+toYear(data["event"].start_date)
+            thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/'+idEvent+'/groupphoto.jpg"></img></p>'    
+            objectives_event = '<span> Objectives </span><p>'+data["event"].description+'</p>' 
+            document.getElementById("event").innerHTML =  data_event+info_event+thumbnail_event+objectives_event
+    error    : (xhr, status, err) ->
+        console.log("null "+err)
+    complete : (xhr, status) ->
+        console.log("complete")
+
 #EVENT SCHEDULE
 $('.schedule').on 'click', (event) =>
     $('#event').hide()
     $('#table_confirmed').hide()
+    $('#press').hide()
     $('#table_schedule').show()
-    $.ajax 'https://workshops.birs.ca/events/16w5153/schedule.json',
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'/schedule.json',
             success  : (data, status, xhr) ->
                 for prop, val of data
                     time = val['start_time']
                     day = '<tbody><tr><th class="day-head" colspan="2">'+get_date(time)+'</th></tr>'
                     comp = getdate(time)
-                    body ='<tr><td class="item-time">'+get_time(val['start_time'])+' - '+get_time(val['end_time'])+'</td><td class="item-name">'+val["name"]+' '+val["location"]+'</td></tr>'
+                    body = '<tr><td class="item-time">'+get_time(val['start_time'])+' - '+get_time(val['end_time'])+'</td><td class="item-name">'+val["name"]+' '+val["location"]+'</td></tr>'
                     if (comp == 0)
-                        #document.getElementById("sun").innerHTML = day
-                        document.getElementById("sun").innerHTML += body
+                        document.getElementById("headsun").innerHTML = day
+                        document.getElementById("bsun").innerHTML += body
                     else if (comp == 1)
-                        #document.getElementById("mon").innerHTML = day
-                        document.getElementById("mon").innerHTML += body
+                        document.getElementById("headmon").innerHTML = day
+                        document.getElementById("bmon").innerHTML += body
                     else if (comp == 2)
-                        #document.getElementById("tue").innerHTML = day
-                        document.getElementById("tue").innerHTML += body
+                        document.getElementById("headtue").innerHTML = day
+                        document.getElementById("btue").innerHTML += body
                     else if (comp == 3)
-                        #document.getElementById("wed").innerHTML = day
-                        document.getElementById("wed").innerHTML += body
+                        document.getElementById("headwed").innerHTML = day
+                        document.getElementById("bwed").innerHTML += body
                     else if (comp == 4)
-                        #document.getElementById("thu").innerHTML = day
-                        document.getElementById("thu").innerHTML += body
+                        document.getElementById("headthu").innerHTML = day
+                        document.getElementById("bthu").innerHTML += body
                     else if (comp == 5)
-                        #document.getElementById("fri").innerHTML = day
-                        document.getElementById("fri").innerHTML += body
-                console.log(prop)
-             	console.log(val)
+                        document.getElementById("headfri").innerHTML = day
+                        document.getElementById("bfri").innerHTML += body
             error    : (xhr, status, err) ->
                 console.log("null "+err)
             complete : (xhr, status) ->
                 console.log("complete")
-#MAILING LIST
-$('.participants').on 'click', (event) =>
+#PRESS
+$('.pressr').on 'click', (event) =>
     $('#event').hide()
     $('#table_schedule').hide()
+    $('#table_confirmed').hide()
+    $('#press').show()
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+        success  : (data, status, xhr) ->
+                confirmed_participants = data["event"].press_release
+                document.getElementById("press").innerHTML = confirmed_participants
+        error    : (xhr, status, err) ->
+            console.log("null "+err)
+        complete : (xhr, status) ->
+            console.log("complete")
+#VIDEOS
+$('.videos').on 'click', (event) =>
+    $('#event').hide()
+    $('#table_schedule').hide()
+    $('#table_confirmed').hide()
+    $('#press').hide()
+    $('#vidplayer').show()
+    jwplayer('vidplayer').setup
+      file: 'http://videos.birs.ca/2016/16w5111/201608030940-Madry.mp4'
+      image: 'http://www.birs.ca/files/images/poster.png'
+      autostart: true
+      width: 832
+      height: 480
+      sharing:
+        code: encodeURI('<iframe src="http://www.birs.ca/events/2016/5-day-workshops/16w5111/videos/embed/201608030940-Madry.mp4" width="832"  height="480" frameborder="0"  scrolling="auto" itemprop="video" />')
+        link: 'http://www.birs.ca/events/2016/5-day-workshops/16w5111/videos/watch/201608030940-Madry.html'
+
+#PARTICIPANTS
+$('.participants').on 'click', (event) =>
+    $('#event').hide()
+    $('#press').hide()
+    $('#table_schedule').hide()
     $('#table_confirmed').show()
-    $.ajax 'https://workshops.birs.ca/events/16w5153.json',
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
         success  : (data, status, xhr) ->  
             for i in [0...40]
-                confirmed_participants ='<tr><td><a href='+data['members'][i].url+'>'+data['members'][i].firstname+' '+data['members'][i].lastname+'</a></td><td>'+data['members'][i].affiliation+'</td></tr>'
+                confirmed_participants ='<tr><td><a href='+data['members'][i].url+'>'+data['members'][i].lastname+' , '+data['members'][i].firstname+'</a></td><td>'+data['members'][i].affiliation+'</td></tr>'
                 document.getElementById("table_confirmed").innerHTML += confirmed_participants
             console.log(data['members'])
         error    : (xhr, status, err) ->
@@ -64,7 +106,7 @@ $('.participants').on 'click', (event) =>
 
 get_time =(start) ->
     start= new Date(start)
-    start.getHours()+':'+start.getMinutes()
+    start.getUTCHours()+':'+start.getUTCMinutes()
 
 getdate =(da) ->
     date = new Date(da)

@@ -17,9 +17,7 @@ group :development do
   gem 'wdm', '~> 0.1.1', require: 'wdm' if RUBY_PLATFORM =~ /mswin|mingw/i
 
   gem 'coffee-rails', '~> 4.1', '>= 4.1.1'
-
-  gem 'locomotivecms-search', require: 'locomotive/search/mongoid'
-
+  
 end
 
 group :misc do

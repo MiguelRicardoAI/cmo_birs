@@ -15,7 +15,7 @@ footer p {
   text-align: center;
 }
 //margin top y bottom
-span{
+span.vino{
 	border-bottom: 1px solid #cccccc;
   color: #800000;
   font-family: "Times",Times New Roman,serif;
@@ -29,7 +29,6 @@ span{
   padding: 0;
   margin: 0;
   position: relative;
-  height: 348px;
 }
 #carousel li {
   opacity: 0;
@@ -123,5 +122,17 @@ iframe{
     border-radius: 6px 0 6px 6px;
 }
 
+.item-time{
+  width: 18%;
+  text-align: left;
+}
 
-
+.containertext{
+  margin-top: 30%;
+}
+.no-wr{
+  margin-left: -30px;
+}
+.no-wr2{
+  margin-left: -45px;
+}
