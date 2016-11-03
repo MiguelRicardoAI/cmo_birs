@@ -15,10 +15,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    activesearch (0.3.2)
-      actionpack
-      activesupport
-      sucker_punch
     activesupport (4.2.7.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -82,8 +78,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     locomotivecms-liquid (4.0.0)
-    locomotivecms-search (0.3.6)
-      activesearch (~> 0.3.2)
     locomotivecms-solid (4.0.1)
       locomotivecms-liquid (~> 4.0.0)
     locomotivecms_coal (1.0.0)
@@ -183,8 +177,6 @@ GEM
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     stringex (2.5.2)
-    sucker_punch (2.0.2)
-      concurrent-ruby (~> 1.0.0)
     thin (1.6.4)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -201,7 +193,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.1, >= 4.1.1)
-  locomotivecms-search
   locomotivecms_wagon (~> 2.0.0)
   rb-fsevent (~> 0.9.1)
 

@@ -1,0 +1,84 @@
+---
+title: Index
+is_layout: true
+position: 1
+---
+{% extends 'layouts/index' %}
+{% block content %}
+
+<div class="container">
+<div class="containertext">
+      <div class="col-md-8">
+        <div class="space">
+          {{ 'span(vino). Noticias' | textile}}
+        </div>
+        <ul>
+          <li class="special-announcement">
+            <a  class="letterbig" href="workshops">Programa cientifico 2017 en CMO</a>
+          </li>
+        </ul>
+          <p>{{ 'span(vino). Esta semana en CMO' | textile}}</p>
+        <div class="col-md-3 space" id="thumb"></div>
+        <div class="col-md-9 space" id="info"></div>
+      </div>
+
+      <div class="col-md-3 justy space">
+        <b>
+          Lo que dicen acerca de CMO-BIRS
+        </b>
+        <div class="lettersmall">
+          <blockquote class="lettersmall">   
+          {% editable_text "testimonal", rows: 6 %}       
+            <p>
+              "El workshop fue muy interesante,especialmente por que permiteuna gran interacción entre muchas personas de diferentes origenes a unirse a un espacio muy comodo"
+            </p>
+          {% endeditable_text %}
+            <div class="rigth lettermini">
+              <a href="http://www.birs.ca/testimonials/cmo/#testimonial-1840">read more testimonials >> </a>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+   
+      <div class="col-md-8">
+        <div class="space">
+        {{ 'span(vino). Reciente en CMO' | textile}}
+        </div>
+        <div class="col-md-12">
+          {{ 'div(#last). ' | textile }}
+        </div>
+      </div>
+    
+      <div class="col-md-3 lettersmall">
+        <div class="space">
+        {{ 'span(vino). Proximos eventos' | textile}}
+        </div>
+          {{ 'div(#upcoming). ' | textile }}        
+      </div>
+
+      <div class="col-md-4 lettersmall">
+        <div class="space">
+        {{ 'span(vino). Links rapidos' | textile}}            
+        </div>
+      {%  editable_text "quick_index", rows:10 %}
+        <p>
+          <a href="faq">Preguntas más frecuentes (FAQ)</a>
+        </p>
+        <p>
+          <a href="faq">Mapa del sitio</a>
+        </p>
+        <p>
+          <a href="">Viajar a CMO</a>
+        </p>
+        <p>
+          <a href="workshops">Calendario de todos los eventos</a>
+        </p>
+      {% endeditable_text %}
+
+      </div>  
+
+  </div>
+
+</div>
+
+{% endblock %}

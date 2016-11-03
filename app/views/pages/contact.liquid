@@ -13,12 +13,14 @@ position: 8
 <div class="containertext col-md-12">
 
   <div class="space center">
-    <span>
-      Contact us
-    </span>
+
+    {{ 'span(vino). Contact us' | textile}}
+
   </div>
-  <div class="col-md-offset-2 col-md-4 ">
-    <p>CMO</p>
+  
+  <div class="col-md-offset-1 col-md-4 ">
+    {% editable_text "CMO_contact", rows: 40 %}
+    <span class="vino">CMO</span>
     <p><b> Interim Director:</b></p>
     <p>Dr. José Antonio De la Peña Mena</p>
     <p>Phone: +52 (473) 732 7155 ext.4545</p>
@@ -43,9 +45,13 @@ position: 8
     <p>CMO OFFICE</p>
     <p>Calle Hidalgo #21 Col. San Felipe del Agua</p>
     <p>C.P. 68020 Oaxaca, Oax. Mexico</p>
+    {% endeditable_text %}
+
   </div>
-  <div class="col-md-5 col-md-offset-1">
-    <p>BIRS</p>
+  <div class="col-md-4 ">
+
+    {% editable_text "BIRS_contact", rows:40 %}
+    <span class="vino">BIRS</span>
     <p><b>Scientific Director:</b></p>
     <p>Dr. Nassif Ghoussoub</p>
     <p>Phone: 604-822-1649</p>
@@ -61,18 +67,67 @@ position: 8
     <p>Phone: 604-822-5213</p>
     <p>Email: <a href="mailto:birs@birs.ca">birs@birs.ca</a></p>
     <p></p>
+    <p><b>Program Assistant:</b></p>
+    <p>Dominique Vaz</p>
+    <p>Phone: 604-822-1694</p>
+    <p>Email:<a href="mailto:birs-secretary@birs.ca"> birs-secretary@birs.ca </a></p>
+    <p><b>Station Manager:</b></p>
+    <p>Linda Jarigina-Sahoo</p>
+    <p>Phone: 403-763-6999</p>
+    <p>Email: <a href="mailto:birsmgr@birs.ca">birsmgr@birs.ca</a></p>
+    {% endeditable_text %}
+  </div>
+
+  <div class="col-md-3">
+    <p><b>Station Facilitator:</b></p>
+    <p>Bojan Cosic</p>
+    <p>Phone: 403-763-6996</p> 
+    <p>Email: <a href="mailto:birs-facilitator@birs.ca">birs-facilitator@birs.ca</a></p>
     <p><b>Technology Manager:</b></p>
     <p>Brent Kearney</p>
     <p>Phone: 403-763-6997</p>
     <p>Email: <a href="mailto:brentk@birs.ca">brentk@birs.ca</a></p>
-    <p></p>
-    <p><b>BIRS Mailing Address:</b></p>
-    <p>Banff International Research Station</p>
+    <p><b>BIRS Vancouver Mailing Address:</b></p>
+    <p>Office of the Scientific Director Banff International Research Station</p>
+    <p>University of British Columbia</p>
+    <p>4176 – 2207 Main Mall Vancouver  BC  V6T 1Z4 Canada</p>
+    <p><b>BIRS Vancouver Fax:</b> 604-822-0883</p>
+    <p><b>Banff International Research Station</b></p>
     <p>c/o The Banff Centre Room 103, TransCanada Pipelines Pavilion</p>
-    <p>107 Tunnel Mountain Drive Box 1020  Stn 48 </p>
-    <p>Banff  AB  T1L 1H5, Canada</p>
+    <p>107 Tunnel Mountain Drive Box 1020  Stn 48 Banff  AB  T1L 1H5 Canada</p>
+    <p><b>BIRS Banff Fax:</b></p>
+    <p>403-763-6990</p>
   </div>
 </div><!--container-->
+
+<div class="new">
+    <div class="row col-md-9 col-md-offset-2">
+         {% model_form 'customer_messages', success: '/', error: '/contact' %}
+
+          {% if customer_message.errors %}
+            <div class="alert alert-danger" role="alert">The following errors occured</div>
+            <ul>
+            {% for error in customer_message.errors %}
+              <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+          
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <input type="text" class="form-control" name="content[name]" placeholder="Name" aria-describedby="sizing-addon2" value="{{customer_message.name}}">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <input type="text" class="form-control" name="content[email]" placeholder="Email" aria-describedby="sizing-addon2" value="{{customer_message.email}}">
+            </div>
+            <textarea name="content[message]" class="form-control" rows="3" placeholder="message">{{customer_message.message}}</textarea>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+        {% endmodel_form %}
+    </div>
+</div><!--end New-->
+
+
 </div><!--container-->
 
 

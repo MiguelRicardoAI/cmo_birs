@@ -1,0 +1,38 @@
+---
+title: Oaxaca
+listed: true
+published: false
+searchable: true
+---
+
+{% extends 'layouts/event' %}
+
+{% block content %}
+<p>
+{% consume birs_JSON from 'https://workshops.birs.ca/events/location/CMO.json', expires_in: 3000 %}
+{% if birs_JSON == null %}
+  The BIRS API seems to be broken now.
+  {% else %}
+      <table class="table table-bordered">
+     <thead>
+       <tr>
+         <th>Code</th>
+         <th>Name</th>
+         <th>Start</th>
+         <th>End</th>
+       </tr>
+     </thead>
+     <tbody>
+    {% for events in birs_JSON %}
+       <td>{{ events.code }}</td>
+       <td> <a href="event" id="codeEvent" value="{{events.code}}">{{ events.name }}</a></td>
+       <td>{{ events.start_date}}</td>
+       <td>{{ events.end_date}}</td>
+     </tbody>
+    {% endfor %}
+   </table> 
+  {% endif %}
+{% endconsume %}
+</p>
+
+{% endblock %}

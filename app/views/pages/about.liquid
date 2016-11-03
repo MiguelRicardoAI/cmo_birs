@@ -7,12 +7,14 @@ position: 2
 {% extends 'layouts/default' %}
 
 {% block content %}
-{% block header, short_name: true, priority: 1 %}
 
 <div class="container">
 <div class="containertext">
 	<div class="col-md-8 justy space">
-	<span> Casa Matemática Oaxaca</span>
+  
+  {{ 'span(vino). Casa Matemática Oaxaca' | textile}}
+
+  {% editable_text "casa_matematica_oaxaca", rows: 40 %}
 	<p>
 	Casa Matemática Oaxaca (CMO) is an International Research Station of Mathematics (in Oaxaca, Mexico), affiliated with the Banff International Research Station for Mathematical Innovation & Discovery (BIRS) (in Alberta Canada). CMO host both BIRS and National mathematics workshop meetings. When fully functioning, it will be a space for teaching mathematics, and will be linked to the academic, social, governmental and productive sectors of Mexico. The new center is the result of  collaborative efforts between Canada, the US and México.</p>
 	<p>
@@ -22,14 +24,14 @@ position: 2
 	<p>"BIRS is to be a center for scientific interaction, a place where promising ideas develop, where lines of thought that appear unrelated converge. The sources of inspiration should come from many sorts of mathematics (Pure, Applied, Computational and Conceptual), different motivations (Intellectually driven or industrially motivated). People interested in similar problems will unite their potentials and join their efforts in order to work on common research projects."</p>
 	<p>
 	There were many reasons for selecting Oaxaca as the seat of the new international station; Oaxaca is a conduit for creative thought, a cultural capital, offering a propitious environment for mathematical researchers. Oaxaca boasts a rich historical past as well as unparalleled gastronomic and artistic attractions deeply rooted in the indigenous cultures. In addition, its geographical location and temperate climate make Oaxaca an ideal location to receive scientists from around the world. The environment is beautifully suited for collaborative thinking and the development of new ideas. </p>
-	</div>                
-	 {%editable_text faq%}
+	</div>      
+  {% endeditable_text %}
+            
       <div class="col-md-4 ">
         <div class="space">
-          <span>
-            Quick Links
-          </span>
+          {{ 'span(vino). Quick Links' | textile }}
         </div>
+      {%editable_text "quick_about", rows:6 %}
         <p>
           <a href="faq">Frequently Asked Questions (FAQ)</a>
         </p>
@@ -42,12 +44,10 @@ position: 2
         <p>
           <a href="workshops">Calendar of All Events</a>
         </p>
+      {%endeditable_text%}
       </div>  
-    {%endeditable_text%}
-
-</div>
+  </div>
 </div>
 
 
-{% endblock %}
 {% endblock %}
