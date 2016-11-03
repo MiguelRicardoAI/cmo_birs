@@ -4,22 +4,32 @@ $('#table_confirmed').hide()
 $('#press').hide()
 $('#vidplayer').hide()
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $.ajax 'https://workshops.birs.ca/events/16w5153.json',
 =======
+=======
+>>>>>>> feature/cmo
 codeEvent =() ->
     getEvent = getElementById("codeEvent").value
 
 idEvent = codeEvent()
 
 $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+<<<<<<< HEAD
+>>>>>>> feature/cmo
+=======
 >>>>>>> feature/cmo
     success  : (data, status, xhr) ->
         for prop,val of data
             data_event = '<p><span>'+data["event"].name+'('+data['event'].code+')</span></p>'
             info_event = 'Arriving in Oaxaca, Mexico '+get_date(data["event"].start_date)+' and departing '+get_date(data["event"].end_date)+' , '+toYear(data["event"].start_date)
 <<<<<<< HEAD
+<<<<<<< HEAD
             thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/16w5153/groupphoto.jpg"></img></p>'    
+=======
+            thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/'+idEvent+'/groupphoto.jpg"></img></p>'    
+>>>>>>> feature/cmo
 =======
             thumbnail_event = '<p><img class="img-thumbnail" src="http://www.birs.ca/cmo-workshops/2016/'+idEvent+'/groupphoto.jpg"></img></p>'    
 >>>>>>> feature/cmo
@@ -72,7 +82,11 @@ $('.pressr').on 'click', (event) =>
     $('#table_confirmed').hide()
     $('#press').show()
 <<<<<<< HEAD
+<<<<<<< HEAD
     $.ajax 'https://workshops.birs.ca/events/16w5153.json',
+=======
+    $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
+>>>>>>> feature/cmo
 =======
     $.ajax 'https://workshops.birs.ca/events/'+idEvent+'.json',
 >>>>>>> feature/cmo

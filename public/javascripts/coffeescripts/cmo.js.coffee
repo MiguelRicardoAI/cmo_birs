@@ -4,7 +4,11 @@ $.ajax url,
         success  : (data, status, xhr) ->
              for prop , val of data
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if ( (toYear(val.start_date) == toYear(thisYear())) and (prop <= momnt()-2) and (prop) >= momnt()-2)
+=======
+                if ( (toYear(val.start_date) == toYear(thisYear())) and (prop <= momnt()-4) and (prop) >= momnt()-4)
+>>>>>>> feature/cmo
 =======
                 if ( (toYear(val.start_date) == toYear(thisYear())) and (prop <= momnt()-4) and (prop) >= momnt()-4)
 >>>>>>> feature/cmo
@@ -25,7 +29,11 @@ $.ajax url,
             for prop , val of data
                 if (toYear(val.start_date) == toYear(thisYear()))
 <<<<<<< HEAD
+<<<<<<< HEAD
                     if (toDate(val.start_date) < thisYear()) and (prop >= (momnt()-6) and prop <= (momnt()-3) )
+=======
+                    if (toDate(val.start_date) < thisYear()) and (prop >= (momnt()-8) and prop <= (momnt()-5) )
+>>>>>>> feature/cmo
 =======
                     if (toDate(val.start_date) < thisYear()) and (prop >= (momnt()-8) and prop <= (momnt()-5) )
 >>>>>>> feature/cmo

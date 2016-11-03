@@ -16,10 +16,13 @@ GEM
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
 <<<<<<< HEAD
+<<<<<<< HEAD
     activesearch (0.3.2)
       actionpack
       activesupport
       sucker_punch
+=======
+>>>>>>> feature/cmo
 =======
 >>>>>>> feature/cmo
     activesupport (4.2.7.1)
